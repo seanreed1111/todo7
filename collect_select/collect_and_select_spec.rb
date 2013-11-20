@@ -12,7 +12,7 @@ describe Array, "my_collect" do
 	it "should receive a block and return a new array with each element operated on by that block" do
 	[-1,-4,-9].my_collect {|item| item*item}.should eq([1,16,81])
 	end
-
+end
 
 describe Array, "my_select" do
 	it "should receive a block and return a new array with each element where the block == true" do

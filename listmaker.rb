@@ -10,12 +10,16 @@
 
 class Array
 	def make_list
-		self.map.with_index{|item, index|
-		(index+1).to_s.concat(". ").concat(item)
-		}
-
+		self.map.with_index{|item, index| "#{index+1}. #{item}"}
 	end
 end
+
+# this also works
+#self.map.with_index{|item, index| "#{index+1}. #{item}"}
+
+#this also works
+# self.map.with_index{|item, index|
+# (index+1).to_s.concat(". ").concat(item)}
 
 #this also works!!
 #self.map.with_index{|item, index|

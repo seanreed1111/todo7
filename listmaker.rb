@@ -10,7 +10,20 @@
 
 class Array
 	def make_list
-		count = 0
-		self.collect {|item| count+=1;count.to_s.concat(". ").concat(item)}
+		self.map.with_index{|item, index|
+		(index+1).to_s.concat(". ").concat(item)
+		}
+
 	end
 end
+
+#this also works!!
+#self.map.with_index{|item, index|
+#	(index+1).to_s.concat(". ").concat(item)
+#
+#}
+#
+# this works!
+#		count = 0
+#		self.collect {|item| count+=1;count.to_s.concat(". ").concat(item)}
+#

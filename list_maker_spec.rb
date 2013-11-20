@@ -13,10 +13,16 @@ require './listmaker'
 describe Array, '#make_list' do
 	it "should iterates over the array it is called on and appends a number, a period, and a space to each element" do
     ["ich", "ni", "san"].make_list.should eq(["1. ich", "2. ni", "3. san"])
-  end
+  	end
 
   	it "should be an array" do
-    expect(["ich", "ni", "san"].make_list).to be_a(Array)  
-  end
+    expect(["ich", "ni", "san"].make_list).to be_a(Array) 
+    end 
+
+    it "should not change the original array" do
+    	array = ["ich", "ni", "san"]
+    	array.make_list
+    	["ich", "ni", "san"].should eq(array)
+  	end
 
 end
